@@ -1,0 +1,583 @@
+/* ============================================
+   TaskManager Pro - Responsive Styles
+   ============================================ */
+
+/* ============================================
+   Large Screens (1400px and above)
+   ============================================ */
+
+@media (min-width: 1400px) {
+    .stats-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .dashboard-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ============================================
+   Desktop (1200px - 1399px)
+   ============================================ */
+
+@media (max-width: 1399px) {
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ============================================
+   Laptop (992px - 1199px)
+   ============================================ */
+
+@media (max-width: 1199px) {
+    .sidebar {
+        width: 250px;
+    }
+
+    .main-content {
+        margin-left: 250px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================
+   Tablet (768px - 991px)
+   ============================================ */
+
+@media (max-width: 991px) {
+    .sidebar {
+        transform: translateX(-100%);
+        width: 280px;
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .top-nav {
+        padding-left: 60px;
+    }
+
+    .search-container {
+        max-width: 300px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .category-chart {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+
+    .chart-item {
+        grid-template-columns: 1fr;
+        gap: 0.25rem;
+    }
+
+    .chart-bar {
+        height: 6px;
+    }
+
+    .analytics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .task-detail-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================
+   Mobile Large (576px - 767px)
+   ============================================ */
+
+@media (max-width: 767px) {
+    :root {
+        --font-size-2xl: 1.25rem;
+        --font-size-3xl: 1.5rem;
+    }
+
+    .kanban-board {
+        grid-template-columns: 1fr;
+    }
+
+    .kanban-column {
+        min-height: auto;
+    }
+
+    .top-nav {
+        flex-wrap: wrap;
+        gap: var(--spacing-md);
+    }
+
+    .search-container {
+        flex: none;
+        order: 2;
+        width: 100%;
+        max-width: none;
+    }
+
+    .top-nav-actions {
+        order: 1;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .btn#btn-add-task span {
+        display: inline;
+    }
+
+    .view {
+        padding: var(--spacing-md);
+    }
+
+    .view-header h1 {
+        font-size: var(--font-size-xl);
+    }
+
+    .filters-container {
+        flex-direction: column;
+    }
+
+    .filter-group {
+        width: 100%;
+    }
+
+    .filter-select {
+        width: 100%;
+    }
+
+    .stat-card {
+        padding: var(--spacing-md);
+    }
+
+    .stat-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .stat-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .stat-value {
+        font-size: var(--font-size-2xl);
+    }
+
+    .task-card {
+        flex-wrap: wrap;
+    }
+
+    .task-meta {
+        width: 100%;
+    }
+
+    .auth-section {
+        padding: var(--spacing-md);
+    }
+
+    .auth-form {
+        padding: var(--spacing-lg);
+    }
+
+    .modal {
+        margin: var(--spacing-sm);
+        max-height: calc(100vh - var(--spacing-md));
+    }
+
+    .modal-header,
+    .modal-body,
+    .modal-footer {
+        padding: var(--spacing-md);
+    }
+
+    .modal-footer {
+        flex-direction: column-reverse;
+    }
+
+    .modal-footer .btn {
+        width: 100%;
+    }
+
+    #toast-container {
+        left: var(--spacing-sm);
+        right: var(--spacing-sm);
+        top: var(--spacing-sm);
+    }
+
+    .toast {
+        min-width: auto;
+        max-width: none;
+    }
+
+    .pie-chart {
+        width: 180px;
+        height: 180px;
+    }
+
+    .dashboard-grid {
+        gap: var(--spacing-md);
+    }
+
+    .category-chart {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================
+   Mobile Small (up to 575px)
+   ============================================ */
+
+@media (max-width: 575px) {
+    :root {
+        --font-size-xl: 1.125rem;
+        --font-size-2xl: 1.25rem;
+        --font-size-3xl: 1.375rem;
+    }
+
+    .sidebar-header h2 {
+        font-size: var(--font-size-base);
+    }
+
+    .nav-item span {
+        display: none;
+    }
+
+    .nav-item {
+        justify-content: center;
+        padding: 0.75rem;
+    }
+
+    .nav-item svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .sidebar-footer {
+        padding: var(--spacing-sm);
+    }
+
+    .user-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .user-details {
+        display: none;
+    }
+
+    .btn-logout span {
+        display: none;
+    }
+
+    .btn-logout {
+        justify-content: center;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-card {
+        flex-direction: row;
+    }
+
+    .task-header {
+        flex-direction: column;
+        gap: var(--spacing-xs);
+    }
+
+    .task-priority-badge {
+        align-self: flex-start;
+    }
+
+    .task-actions {
+        width: 100%;
+        justify-content: flex-end;
+        margin-top: var(--spacing-sm);
+    }
+
+    .auth-branding .logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .auth-branding .logo svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    .auth-branding h1 {
+        font-size: var(--font-size-xl);
+    }
+
+    .form-options {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-sm);
+    }
+
+    .dropdown-header {
+        padding: var(--spacing-sm);
+    }
+
+    .dropdown-name {
+        font-size: var(--font-size-xs);
+    }
+
+    .dropdown-email {
+        font-size: var(--font-size-xs);
+    }
+
+    .btn#btn-add-task span {
+        display: none;
+    }
+
+    .btn#btn-add-task svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .user-menu-btn {
+        padding: 0.25rem;
+    }
+
+    .avatar-small {
+        width: 32px;
+        height: 32px;
+        font-size: 10px;
+    }
+
+    .welcome-section h1 {
+        font-size: var(--font-size-lg);
+    }
+
+    .view-date {
+        font-size: var(--font-size-xs);
+        padding: 0.375rem 0.75rem;
+    }
+
+    .task-checkbox-wrapper {
+        order: -1;
+    }
+
+    .task-content {
+        order: 0;
+    }
+
+    .task-actions {
+        order: 1;
+    }
+}
+
+/* ============================================
+   Touch Device Optimizations
+   ============================================ */
+
+@media (hover: none) and (pointer: coarse) {
+    .btn:hover {
+        transform: none;
+    }
+
+    .stat-card:hover {
+        transform: none;
+    }
+
+    .stat-card:hover::before {
+        opacity: 0;
+    }
+
+    .task-card:hover {
+        box-shadow: none;
+        border-color: var(--border-primary);
+    }
+
+    .kanban-card:hover {
+        box-shadow: none;
+    }
+
+    .kanban-card-actions {
+        display: flex;
+    }
+
+    .task-action-btn:hover {
+        background: transparent;
+    }
+}
+
+/* ============================================
+   Print Styles
+   ============================================ */
+
+@media print {
+    .sidebar,
+    .mobile-menu-toggle,
+    .top-nav,
+    .btn-add-task,
+    .task-actions,
+    .modal-overlay,
+    #toast-container {
+        display: none !important;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .view {
+        padding: 0;
+    }
+
+    body {
+        background: white;
+        color: black;
+    }
+
+    .stat-card,
+    .task-card,
+    .kanban-column,
+    .dashboard-card {
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+}
+
+/* ============================================
+   Reduced Motion
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ============================================
+   High Contrast Mode
+   ============================================ */
+
+@media (prefers-contrast: high) {
+    :root {
+        --border-primary: #000;
+        --border-secondary: #333;
+    }
+
+    [data-theme="dark"] {
+        --border-primary: #fff;
+        --border-secondary: #ccc;
+    }
+
+    .btn-primary {
+        border: 2px solid currentColor;
+    }
+
+    .task-card,
+    .stat-card,
+    .kanban-card,
+    .kanban-column {
+        border-width: 2px;
+    }
+
+    .task-checkbox {
+        border-width: 3px;
+    }
+}
+
+/* ============================================
+   Landscape Mobile
+   ============================================ */
+
+@media (max-height: 500px) and (orientation: landscape) {
+    .auth-section {
+        padding-top: var(--spacing-md);
+        padding-bottom: var(--spacing-md);
+    }
+
+    .auth-branding {
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .auth-branding .logo {
+        width: 50px;
+        height: 50px;
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .auth-form {
+        padding: var(--spacing-md);
+    }
+
+    .modal {
+        max-height: 85vh;
+    }
+}
+
+/* ============================================
+   Sidebar Overlay on Mobile
+   ============================================ */
+
+@media (max-width: 991px) {
+    .sidebar-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 40;
+    }
+
+    .sidebar.open + .sidebar-overlay {
+        display: block;
+    }
+}
+
+/* ============================================
+   Safe Area Insets (notch phones)
+   ============================================ */
+
+@supports (padding: max(0px)) {
+    .sidebar {
+        padding-top: max(var(--spacing-lg), env(safe-area-inset-top));
+        padding-bottom: max(var(--spacing-md), env(safe-area-inset-bottom));
+    }
+
+    .top-nav {
+        padding-top: max(var(--spacing-md), env(safe-area-inset-top));
+    }
+
+    #toast-container {
+        top: max(var(--spacing-lg), env(safe-area-inset-top));
+    }
+
+    .modal-overlay {
+        padding-top: max(var(--spacing-md), env(safe-area-inset-top));
+        padding-bottom: max(var(--spacing-md), env(safe-area-inset-bottom));
+    }
+}
