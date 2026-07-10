@@ -239,17 +239,23 @@ const Auth = {
      * Handle user logout
      */
     logout() {
-        Storage.logout();
-        this.currentUser = null;
-        this.showAuth();
+    Storage.logout();
 
-        // Reset forms
-        document.getElementById('login-submit-form')?.reset();
-        document.getElementById('register-submit-form')?.reset();
+    this.currentUser = null;
 
-        Notifications.logoutSuccess();
-    },
+    this.showAuth();
 
+    // Reset forms
+    document.getElementById("login-submit-form")?.reset();
+    document.getElementById("register-submit-form")?.reset();
+
+    Notifications.logoutSuccess();
+
+    // Reload page to clear all module state
+    setTimeout(() => {
+        location.reload();
+    }, 500);
+},
     /**
      * Setup form switching (login <-> register)
      */
@@ -407,6 +413,9 @@ const Auth = {
         return this.currentUser;
     },
 
+    isLoggedIn() {
+    return this.currentUser !== null;
+},
     /**
      * Get current user ID
      * @returns {string|null} User ID

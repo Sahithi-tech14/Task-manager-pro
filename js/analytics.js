@@ -37,7 +37,8 @@ const Analytics = {
 
         // Calculate stroke dash arrays for pie chart
         if (total > 0) {
-            const circumference = 2 * Math.PI * 80; // radius = 80
+            const radius = 45;
+            const circumference = 2 * Math.PI * radius;
             const completedPercent = statusData.completed / total;
             const inProgressPercent = statusData.inProgress / total;
             const todoPercent = statusData.todo / total;
